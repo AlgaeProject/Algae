@@ -4,8 +4,8 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    color: white; /* Set all text to white */
-    background-color: #000; /* Assuming a black background to contrast white text */
+    color: white;
+    background-color: #000;
 }
 
 /* Navigation bar styles */
@@ -18,7 +18,7 @@ nav.top-right {
 nav a {
     margin-left: 20px;
     text-decoration: none; /* Remove underline */
-    color: white;
+    color: white; /* Make links white */
     font-size: 18px;
     font-weight: bold;
     font-family: "Helvetica Light", "Helvetica", Arial, sans-serif;
@@ -27,6 +27,16 @@ nav a {
 /* Hover effect for navigation links */
 nav a:hover {
     color: #f39c12; /* Change color when hovering over links */
+}
+
+/* Ensure links don't show blue/underline */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f39c12;
 }
 
 /* Container for the main content */
@@ -43,34 +53,32 @@ nav a:hover {
 h1 {
     font-size: 48px;
     margin: 20px 0;
-    color: white; /* Ensure title is white */
+    color: white;
 }
 
 .quote {
     font-size: 24px;
     margin: 10px 0;
-    color: white; /* Ensure quote is white */
+    color: white;
     font-style: italic;
 }
 
 .email, .rights {
     font-size: 18px;
     margin-top: 20px;
-    color: white; /* Ensure email and rights text is white */
+    color: white;
 }
 
 .email a {
     color: white;
-    text-decoration: none; /* Remove underline from email link */
+    text-decoration: none;
 }
 
 .email a:hover {
-    color: #f39c12; /* Hover effect for email link */
+    color: #f39c12;
 }
 
-/* About and Contact pages specific styles */
-
-/* Styling the contact box */
+/* Contact box styling */
 .contact-box {
     background-color: rgba(128, 128, 128, 0.3); /* 30% transparent grey */
     border-radius: 15px;
@@ -112,7 +120,7 @@ h1 {
 .team-member {
     text-align: center;
     font-family: "Helvetica Light", "Helvetica", Arial, sans-serif;
-    color: white; /* Ensure team member text is white */
+    color: white;
 }
 
 .team-member img {
