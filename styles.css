@@ -13,7 +13,7 @@ body, html {
 
 /* Full-screen background image */
 body {
-    background: url('assets/background.jpg') no-repeat center center fixed;
+    background: url('Assets/background.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
