@@ -110,10 +110,10 @@ nav.top-nav a:hover {
 
 .contact-box {
     display: flex;
-    background-color: rgba(128, 128, 128, 0.3); /* 30% transparent grey */
+    background-color: rgba(128, 128, 128, 0.7); /* 30% transparent grey */
     border-radius: 15px;
     padding: 20px;
-    width: 60%;
+    width: 70%;
 }
 
 .contact-photo {
@@ -137,21 +137,38 @@ nav.top-nav a:hover {
 
 .team-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Distribute images evenly */
+    flex-wrap: wrap; /* If screen is too small, images will wrap */
     margin-top: 50px;
 }
 
 .team-member {
     text-align: center;
+    flex: 1; /* Ensure each team member takes up equal width */
+    margin: 10px; /* Small margin around each image */
 }
 
 .team-member img {
-    width: 150px;
-    border-radius: 50%;
+    width: 100%; /* Ensure the image takes up full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Set a max width for the images */
+    aspect-ratio: 1 / 1; /* Make the image square */
+    object-fit: cover; /* Crop to maintain square format */
+    border-radius: 10px; /* Optional rounded corners */
     margin-bottom: 10px;
+}
+
+/* Styling external links */
+a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline only on hover */
 }
 
 /* Hover effect for navigation links */
 nav a:hover {
-    color: #21137b; /* Change color when hovering over links */
+    color: #e0b9aa; /* Change color when hovering over links */
 }
