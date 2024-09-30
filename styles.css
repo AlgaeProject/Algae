@@ -1,73 +1,63 @@
-/* General styles */
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body, html {
     height: 100%;
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 300; /* This sets the font to light weight */
+    font-family: 'Arial', sans-serif;
     color: white;
-    background: url('Assets/background.jpg') no-repeat center center fixed; /* Your background image */
-    background-size: cover; /* Cover the entire background */
 }
 
-/* Navigation bar styles */
-nav.top-right {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+/* Full-screen background image */
+body {
+    background: url('assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav a {
-    margin-left: 20px;
-    text-decoration: none; /* Remove underline */
-    color: white; /* Make links white */
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "Helvetica Light", "Helvetica", Arial, sans-serif;
-}
-
-/* Hover effect for navigation links */
-nav a:hover {
-    color: #f39c12; /* Change color when hovering over links */
-}
-
-/* Ensure links don't show blue/underline */
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #f39c12;
-}
-
-/* Container for the main content */
+/* Centering the content */
 .container {
     text-align: center;
-    padding-top: 150px;
+    position: relative;
+    z-index: 1;
 }
 
+/* Styling the logo */
 .logo {
-    width: 150px;
-    height: auto;
+    width: 150px; /* Adjust size as needed */
+    margin-bottom: 20px;
 }
 
+/* Styling the company name */
 h1 {
-    font-size: 48px;
-    margin: 20px 0;
-    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
+/* Styling the quote */
 .quote {
-    font-size: 24px;
-    margin: 10px 0;
-    color: white;
+    font-size: 1.5rem;
     font-style: italic;
+    margin-bottom: 50px;
 }
 
-.email, .rights {
-    font-size: 18px;
-    margin-top: 20px;
-    color: white;
+/* Styling the email */
+.email {
+    font-size: 1rem;
+    position: fixed; /* Fix the email to the bottom */
+    bottom: 20px;    /* 20px from the bottom of the page */
+    left: 50%;       /* Center the email horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    text-align: center;
+    width: 100%;
 }
 
 .email a {
@@ -76,5 +66,22 @@ h1 {
 }
 
 .email a:hover {
-    color: #f39c12;
+    text-decoration: underline;
+}
+
+/* Optional: Add a dark overlay over the background image to enhance readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust darkness by changing 0.5 */
+    z-index: 0;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #21137b; /* Change color when hovering over links */
 }
