@@ -14,7 +14,7 @@ body, html {
 
 /* Full-screen background image */
 body {
-    background: url('Assets/background_v2.jpeg') no-repeat center center fixed;
+    background: url('Assets/background_v3.jpeg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@ h1 {
 .quote {
     font-size: 1.5rem;
     font-style: italic;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 /* Styling the coming soon */
@@ -54,7 +54,7 @@ h2 {
     font-size: 1.75rem;
     font-weight: italic;
     letter-spacing: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-weight: 300; /* Use light font for Helvetica */
 }
