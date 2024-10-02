@@ -42,12 +42,19 @@ h1 {
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
-
 /* Styling the quote */
 .quote {
     font-size: 1.5rem;
     font-style: italic;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+/* Styling the coming soon */
+h2 {
+    font-size: 2rem;
+    font-weight: italic;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 /* Styling the email */
