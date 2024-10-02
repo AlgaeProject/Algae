@@ -13,13 +13,37 @@ body, html {
 }
 
 /* Full-screen background image */
-body {
+/*body {
     background: url('Assets/background_v3.jpeg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+}*/
+
+/* Full-screen background video */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1; /* Send the video to the background */
+    object-fit: cover; /* Make sure the video covers the entire screen */
 }
+
+/* Optional: Add an overlay to enhance readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
 
 /* Centering the content */
 .container {
