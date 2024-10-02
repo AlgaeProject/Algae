@@ -55,6 +55,8 @@ h2 {
     font-weight: italic;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 300; /* Use light font for Helvetica */
 }
 
 /* Styling the email */
