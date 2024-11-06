@@ -31,12 +31,18 @@
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             var mainUrl = "https://www.algaerenewable.com";
 
-            // Detect Instagram in-app browser
-            if (userAgent.indexOf("Instagram") > -1) {
-                // Show manual redirect prompt
-                document.getElementById("manualRedirect").style.display = "block";
+            // Detect if user is on Instagram in-app browser on an iPhone
+            if (userAgent.includes("Instagram") && (userAgent.includes("iPhone") || userAgent.includes("iPad"))) {
+                // Attempt to redirect to Safari using x-web-search scheme
+                var safariLink = `x-web-search://?${mainUrl}`;
+                window.location.href = safariLink;
+
+                // Show fallback prompt in case redirection fails
+                setTimeout(function() {
+                    document.getElementById("manualRedirect").style.display = "block";
+                }, 3000); // Show after 3 seconds if redirect does not occur
             } else {
-                // Directly open link in a new tab for other browsers
+                // For non-Instagram browsers or non-iPhone devices, open directly
                 window.open(mainUrl, "_blank");
             }
         };
