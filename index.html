@@ -33,7 +33,7 @@
 
             // Detect if user is on Instagram in-app browser on an iPhone
             if (userAgent.includes("Instagram") && (userAgent.includes("iPhone") || userAgent.includes("iPad"))) {
-                // Attempt to redirect to Safari using x-web-search scheme
+                // Attempt to redirect to Safari using x-web-search scheme with an immediate JS redirect
                 var safariLink = `x-web-search://?${mainUrl}`;
                 window.location.href = safariLink;
 
@@ -47,5 +47,6 @@
             }
         };
     </script>
+
 </body>
 </html>
