@@ -10,44 +10,14 @@
 
     <div class="container">
         <img src="Assets/logo.png" alt="Company Logo" class="logo">
-        <h1><a href="#" id="redirectLink">Alga.e</a></h1>
+        <h1>Alga.e</h1>
 
         <p class="quote">"The greatest threat to our planet is to believe someone else will save it" - Robert Swan</p>
 
         <h2>Coming soon...</h2>
 
-        <p class="email">Contact us: <a href="mailto:contact@algaerenewable">contact@algaerenewable</a></p>
-
-        <!-- Fallback Message for Manual Opening -->
-        <div id="manualRedirect" style="display: none; margin-top: 20px;">
-            <p>For the best experience, please open this link in Safari:</p>
-            <button id="openInSafari">Open Alga.e in Safari</button>
-            <p>If the button doesn’t work, please copy and paste this URL into Safari:</p>
-            <p><strong>https://www.algaerenewable.com</strong></p>
-        </div>
+        <p class="email">Contact us: <a href="mailto:contact@algaerenewable.com">contact@algaerenewable.com</a></p>
     </div>
-
-    <script>
-        document.getElementById("redirectLink").onclick = function(event) {
-            event.preventDefault();
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            var mainUrl = "https://www.algaerenewable.com";
-
-            // Detect if user is on Instagram in-app browser on an iPhone
-            if (userAgent.includes("Instagram") && (userAgent.includes("iPhone") || userAgent.includes("iPad"))) {
-                // Show manual redirect prompt
-                document.getElementById("manualRedirect").style.display = "block";
-
-                // Add event listener to button to attempt opening in Safari
-                document.getElementById("openInSafari").onclick = function() {
-                    window.open(mainUrl, "_blank");
-                };
-            } else {
-                // For non-Instagram browsers or non-iPhone devices, open directly
-                window.open(mainUrl, "_blank");
-            }
-        };
-    </script>
-
+    
 </body>
 </html>
