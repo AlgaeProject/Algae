@@ -18,10 +18,12 @@
 
         <p class="email">Contact us: <a href="mailto:contact@algaerenewable">contact@algaerenewable</a></p>
 
-        <!-- This is the link shown if Instagram is detected -->
+        <!-- Fallback Message for Manual Opening -->
         <div id="manualRedirect" style="display: none; margin-top: 20px;">
-            <p>Tap below to open in your main browser for the best experience this is a test 12:54:</p>
-            <a href="https://www.algaerenewable.com" id="openInBrowser" target="_blank">Open Alga.e in Browser</a>
+            <p>For the best experience, please open this link in Safari:</p>
+            <button id="openInSafari">Open Alga.e in Safari</button>
+            <p>If the button doesn’t work, please copy and paste this URL into Safari:</p>
+            <p><strong>https://www.algaerenewable.com</strong></p>
         </div>
     </div>
 
@@ -33,14 +35,13 @@
 
             // Detect if user is on Instagram in-app browser on an iPhone
             if (userAgent.includes("Instagram") && (userAgent.includes("iPhone") || userAgent.includes("iPad"))) {
-                // Attempt to redirect to Safari using x-web-search scheme with an immediate JS redirect
-                var safariLink = `x-web-search://?${mainUrl}`;
-                window.location.href = safariLink;
+                // Show manual redirect prompt
+                document.getElementById("manualRedirect").style.display = "block";
 
-                // Show fallback prompt in case redirection fails
-                setTimeout(function() {
-                    document.getElementById("manualRedirect").style.display = "block";
-                }, 3000); // Show after 3 seconds if redirect does not occur
+                // Add event listener to button to attempt opening in Safari
+                document.getElementById("openInSafari").onclick = function() {
+                    window.open(mainUrl, "_blank");
+                };
             } else {
                 // For non-Instagram browsers or non-iPhone devices, open directly
                 window.open(mainUrl, "_blank");
