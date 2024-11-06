@@ -18,9 +18,10 @@
 
         <p class="email">Contact us: <a href="mailto:contact@algaerenewable">contact@algaerenewable</a></p>
 
-        <!-- Button for manual redirection if necessary -->
+        <!-- This is the link shown if Instagram is detected -->
         <div id="manualRedirect" style="display: none; margin-top: 20px;">
-            <p>For the best experience, please <a href="https://www.algaerenewable.com" target="_blank" id="openInBrowser">open in your main browser</a>.</p>
+            <p>Tap below to open in your main browser for the best experience:</p>
+            <a href="https://www.algaerenewable.com" id="openInBrowser" target="_blank">Open Alga.e in Browser</a>
         </div>
     </div>
 
@@ -30,12 +31,12 @@
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             var mainUrl = "https://www.algaerenewable.com";
 
-            // Check if user is in Instagram's in-app browser
+            // Detect Instagram in-app browser
             if (userAgent.indexOf("Instagram") > -1) {
-                // Show a prompt or button to open in the main browser
+                // Show manual redirect prompt
                 document.getElementById("manualRedirect").style.display = "block";
             } else {
-                // If not in Instagram, open directly in a new tab
+                // Directly open link in a new tab for other browsers
                 window.open(mainUrl, "_blank");
             }
         };
